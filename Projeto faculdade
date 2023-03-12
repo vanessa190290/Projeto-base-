@@ -1,0 +1,43 @@
+CREATE TABLE Professor 
+( 
+ Id_Professor: INT PRIMARY KEY,  
+ Endereco_Professor: INT NOT NULL,  
+ Telefone_Professor: INT NOT NULL,  
+ Prontuario INT NOT NULL,  
+ UNIQUE (Endereco_Professor:,Telefone_Professor:,Prontuario)
+); 
+
+CREATE TABLE Disciplina 
+( 
+ Id_Nome INT NOT NULL,  
+ UNIQUE (Id_Nome)
+); 
+
+CREATE TABLE Cursos 
+( 
+ Id_nome INT NOT NULL,  
+ Sigla INT NOT NULL,  
+ Duracao INT NOT NULL,  
+ Data_Início INT NOT NULL,  
+ UNIQUE (Id_nome,Duracao,Data_Início)
+); 
+
+CREATE TABLE Diretor 
+( 
+ Id_nome INT NOT NULL,  
+ Endereco INT NOT NULL,  
+ Telefone INT NOT NULL,  
+ Celular INT NOT NULL,  
+ CPF INT NOT NULL,  
+ UNIQUE (Id_nome,Endereco,Telefone,CPF)
+); 
+
+CREATE TABLE Aluno 
+( 
+ Id_nome INT NOT NULL,  
+ Endereco_aluno INT NOT NULL,  
+ Telefone INT NOT NULL,  
+ Celular INT NOT NULL,  
+ CPF INT NOT NULL,  
+ UNIQUE (Id_nome,Endereco_aluno,Telefone,Celular,CPF)
+); 
